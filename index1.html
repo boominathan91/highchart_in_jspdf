@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+
+<head></head>
+
+<body ng-controller="MyCtrl">
+  <input type="button" onclick="chartWithContentDownload()" value="download" /> Please click on this button to get chart with html content on pdf
+  <div class="white-back row" style="padding: 1.5rem;" id="tvgMainCnt">
+    <div id="top-content">
+      <div>
+        <div>
+          <img src="http://i.imgur.com/38YQy86.png" style="height: 50px;" />
+        </div>
+        </div>
+      <div style="margin-top: 1rem;">
+        <p style="color:blue">
+          Dear members,
+        </p>
+      </div>
+      <div>
+        Added some fake text: Please ignore this is test text, Please ignore this is test text, Please ignore this is test text.
+      </div>
+      <br />
+      <div style="margin-top: 1rem;">
+        <p>
+          Download of chart with html content should work on all browser but not working in Microsoft edge.
+        </p>
+      </div>
+    </div>
+    <div id="middle-content">
+      <highchart id="testchart" config="testconfig"></highchart>
+    </div>
+    <div id="bottom-content">
+      <p>Thanks for looking into this issue, strugging to fix this for last 2 days..
+      UPDATE: Finally able to fix it. Cheers!!</p>
+    </div>
+  </div>
+
+</body>
+  <script src="jquery.min.js"></script> 
+  <script src="jspdf.debug.js"></script>
+  <script src="highcharts.js"></script>
+  <script src="html2canvas.min.js"></script>
+  <script src="pdfkit.js"></script>
+  <script src="rgbcolor.js"></script>
+  <script src="canvg.js"></script>
+  
+  <script src="custom.js"></script>
+</html>
